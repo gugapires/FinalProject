@@ -1,0 +1,23 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% load bootstrap_toolkit %}
+
+{#TODO Estudar como melhorar saida do django-bootstrap#}
+
+{% block title_block %}
+    Adicionar Categoria
+{% endblock title_block%}
+
+{% block body_block %}
+    <div>
+        <form role="form" id="category_form" method="post" action="{% url 'add_category' %}">
+            <h2 class="form-signin-heading">Adicionar categoria</h2>
+            {% csrf_token %}
+            {{ form|as_bootstrap }}
+            <br/>
+            <button class="btn btn-primary" type="submit" name="submit">
+                Criar categoria
+            </button>
+        </form>
+    </div>
+{% endblock body_block %}
