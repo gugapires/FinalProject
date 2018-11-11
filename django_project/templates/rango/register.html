@@ -7,14 +7,14 @@
 {% endblock title_block%}
 
 {% block body_block %}
-    <h1>Registre-se para o Rango</h1>
+    <!--h1>Registre-se para o Rango</h1-->
     {% if registered %}
         Rango diz: <strong>obrigado por se registrar!</strong><br />
         <a href="{% url 'index' %}">Volte à página principal.</a><br />
     {% else %}
         <form role="form" id="user_form" method="post" action="{% url 'register' %}"
               enctype="multipart/form-data">
-            <h2 class="form-signin-heading">Rango diz: <strong>registre-se aqui!</strong><br /></h2>
+            <!--h2 class="form-signin-heading">Rango diz: <strong>registre-se aqui!</strong><br /></h2-->
             {% csrf_token %}
             {{ user_form|as_bootstrap }}
             {{ profile_form|as_bootstrap }}
