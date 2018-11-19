@@ -4,10 +4,10 @@ from django.shortcuts import render
 from django.views.generic.base import View
 
 from .login_required import LoginRequiredMixin
-from ..forms import PageForm
+#from ..forms import PageForm
 from ..models import Category
 
-
+"""
 class Add_Page (LoginRequiredMixin, View ):
     form_class = PageForm
     initial = {}
@@ -39,6 +39,7 @@ class Add_Page (LoginRequiredMixin, View ):
                 return HttpResponseRedirect ( reverse ( 'show_category', args=(category_name_slug,) ) )
 
         return render ( request, self.template_name, {'form': form, 'category': category} )
+"""
 
 # def add_page(request, category_name_slug):
 #     try:

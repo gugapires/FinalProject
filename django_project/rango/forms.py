@@ -14,12 +14,12 @@ class CategoryForm(forms.ModelForm):
         model = Category
         fields = ('name',)
 
+"""
 class PageForm( forms.ModelForm ):
     title = forms.CharField(max_length=128,
                             help_text="Título da página: ")
-    url = forms.URLField(max_length=200,
-                         help_text="URL da página: ")
-    views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
+    #url = forms.URLField(max_length=200, help_text="URL da página: ")
+    #views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
 
     def clean(self):
         cleaned_data = self.cleaned_data
@@ -33,6 +33,7 @@ class PageForm( forms.ModelForm ):
     class Meta:
         model = Page
         exclude = ('category',)
+"""
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
@@ -40,7 +41,9 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ('username', 'email', 'password')
 
-class UserProfileForm(forms.ModelForm):
-    class Meta:
-        model = UserProfile
-        fields = ('website', 'picture')
+#### Essa porcaria foi retirada comentando aqui e comentando em "UserProfile.py" além de retirar sua importação
+#### em "register.py"
+#class UserProfileForm(forms.ModelForm):
+#    class Meta:
+       #model = UserProfile
+       #fields = ('website', 'picture')

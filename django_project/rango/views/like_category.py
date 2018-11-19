@@ -3,7 +3,10 @@ from django.http import HttpResponse
 
 from ..models import Category
 
+### Não preciso dessa merda eu retirei a parte de likes, posso ver se posso dar outro nome caso
+# precise para mostrar os livros
 
+"""
 @login_required
 def like_category(request):
     cat_id = None
@@ -17,3 +20,4 @@ def like_category(request):
             cat.likes = likes
             cat.save()
     return HttpResponse(likes)
+"""
