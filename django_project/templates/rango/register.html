@@ -7,7 +7,6 @@ Registre-se
 {% endblock title_block%}
 
 {% block body_block %}
-<!--h1>Registre-se para o Rango</h1-->
 <div class="row">
     <div class="col-lg-4 offset-4">
         {% if registered %}
@@ -16,7 +15,6 @@ Registre-se
         {% else %}
         <form role="form" id="user_form" method="post" action="{% url 'register' %}"
               enctype="multipart/form-data">
-            <!--h2 class="form-signin-heading">Rango diz: <strong>registre-se aqui!</strong><br /></h2-->
             {% csrf_token %}
             {{ user_form|as_bootstrap }}
             {{ profile_form|as_bootstrap }}
