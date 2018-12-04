@@ -11,12 +11,14 @@
         <h3 class="form-signin-heading">Login:</h3>
         <label for="inputUsername" class="sr-only">Nome do usuário:</label>
         <input type="text" name="username" id="id_username" class="form-control"
-               placeholder="Username" required autofocus>
+               placeholder="Username" required autofocus><br />
         <label for="inputPassword" class="sr-only">Senha:</label>
         <input type="password" name="password" id="id_password" class="form-control"
                placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit"
                 value="Submit" />Entrar</button>
     </form>
-    <p>Não é um membro ainda? <a href="{% url 'register' %}">Registre-se</a>!</p>
+    <div align="center">
+        <p>Não é um membro ainda? <a href="{% url 'register' %}">Registre-se</a>!</p>
+    </div>
 {% endblock body_block %}

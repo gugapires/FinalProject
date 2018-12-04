@@ -3,15 +3,17 @@
 {% load bootstrap_toolkit %}
 
 {% block title_block %}
-    Registre-se
+Registre-se
 {% endblock title_block%}
 
 {% block body_block %}
-    <!--h1>Registre-se para o Rango</h1-->
-    {% if registered %}
+<!--h1>Registre-se para o Rango</h1-->
+<div class="row">
+    <div class="col-lg-4 offset-4">
+        {% if registered %}
         Rango diz: <strong>obrigado por se registrar!</strong><br />
         <a href="{% url 'index' %}">Volte à página principal.</a><br />
-    {% else %}
+        {% else %}
         <form role="form" id="user_form" method="post" action="{% url 'register' %}"
               enctype="multipart/form-data">
             <!--h2 class="form-signin-heading">Rango diz: <strong>registre-se aqui!</strong><br /></h2-->
@@ -23,5 +25,8 @@
                 Registre-se
             </button>
         </form>
-    {% endif %}
+        {% endif %}
+    </div>
+</div>
+
 {% endblock body_block %}
