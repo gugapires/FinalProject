@@ -4,11 +4,10 @@
 {% block body_block %}
         <link href="{% static 'css/signin.css' %}" rel="stylesheet">
     <div class="jumbotron">
-        <!--h2 class="display-5">Entrar</h2-->
+        <h2 class="display-5">Entrar</h2>
     </div>
     <form class="form-signin" role="form" method="post" action=".">
         {% csrf_token %}
-        <h3 class="form-signin-heading">Login:</h3>
         <label for="inputUsername" class="sr-only">Nome do usuário:</label>
         <input type="text" name="username" id="id_username" class="form-control"
                placeholder="Username" required autofocus><br />

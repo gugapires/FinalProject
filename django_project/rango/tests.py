@@ -24,7 +24,7 @@ class IndexPageTests(TestCase):
         # Check the template used to render index page
         # Chapter 4
         response = self.client.get(reverse('index'))
-        self.assertTemplateUsed(response, 'rango/index.html')
+        self.assertTemplateUsed(response, 'rango/login.html')
 
     def test_rango_picture_displayed(self):
         # Check if is there an image called 'rango.jpg' on the index page

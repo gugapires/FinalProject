@@ -9,7 +9,14 @@ def user_login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
+        print(username)
+        print(password)
+
         user = authenticate(username=username, password=password)
+
+        print("olhe aquiiiiiiii")
+        print(user)
+
         if user:
             if user.is_active:
                 login(request, user)
