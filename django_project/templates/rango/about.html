@@ -6,18 +6,23 @@
 {% endblock title_block%}
 
 {% block body_block %}
-    <button class="btn btn-primary" onClick="alert('I run JavaScript');">
-        Click Me
-    </button>
+    <!-- Coloque a informação dentro do botão, assim como pode coloca-la no botao -->
 
-    <button id="about-btn">
-        Click Me - I'm JavaScript on Speed
-    </button>
-    <p>This is a example</p>
+    <!--button class="btn btn-primary" onClick="alert('I run JavaScript');">
+        Click Me
+    </button-->
+
+    <!--button id="about-btn"> Click Me - I'm JavaScript on Speed </button-->
+    <p>This is a example:</p>
+
+    <button class="btn btn-primary" onClick="alert('Hello!');">
+        Tux diz
+    </button><br/><br/><br/>
 
     <div>
-        <img src="/media/imperio_linux.jpg" alt="Picture of Rango"/><br/>
+        <img src="/media/tux.png" alt="Devoção a Tux"/><br/>
         Essa página foi criada por {{ autor }}
+        <!--Isso vem lá do about.py, é rederizado através de parametros-->
     </div>
 
 {% endblock body_block %}
