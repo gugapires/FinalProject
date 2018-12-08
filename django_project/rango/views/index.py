@@ -10,5 +10,4 @@ def index(request):
     # print('Páginas: ', len(page_list), ':', page_list)
 
     context_dict = {'categories': category_list, 'pages': page_list}
-    return render(request, 'rango/login.html', context=context_dict)
-    # No do marco está renderiza em index
+    return render(request, 'rango/index.html', context=context_dict)
