@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from . import views
-#from .views import Add_Page#, Add_Category
+from .views import Add_Category#, Add_Page
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -11,18 +11,17 @@ urlpatterns = [
     url(r'^login/$', views.user_login, name='login'),
     url(r'^logout/$', views.user_logout, name='logout'),
 
-    #url(r'^like/$', views.like_category, name='like_category'), # retirei essa merda de like de categoria
+    #url(r'^like/$', views.like_category, name='like_category'),
     url(r'^suggest/$', views.suggest_category, name='suggest_category'),
 
     # url(r'^goto/$', views.track_url, name='goto'),
-    url(r'^goto/(?P<page_id>[0-9]+)/$', views.track_url, name='goto'),
+    #url(r'^goto/(?P<page_id>[0-9]+)/$', views.track_url, name='goto'),
 
-    # url(r'^add_category/', Add_Category.as_view(), name='add_category'), comentado recentemente
+    url(r'^add_category/', Add_Category.as_view(), name='add_category'),
     # url(r'^add_category/', views.add_category, name='add_category'),
-    #url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.show_category, name='show_category'), # like de categoria
-    #url(r'^(?P<category_name_slug>[\w\-]+)/add_page/$', Add_Page.as_view(), name='add_page'), # like de categoria
+    #url(r'^category/(?P<category_name_slug>[\w\-]+)/$',
+    #    views.show_category, name='show_category'),
+    #url(r'^(?P<category_name_slug>[\w\-]+)/add_page/$',
+    #    Add_Page.as_view(), name='add_page'),
+
 ]
-
-
-## lembre vc esta fazendo uma parte de cadastrar pessoas para fazer login e a depender do login
-## a pessoa poderá cadastrar ou ver livros disponiveis

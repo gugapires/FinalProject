@@ -3,7 +3,7 @@ from ..models import Category, Page
 
 
 def index(request):
-    category_list = Category.objects.order_by('-likes')[:5]
+    category_list = Category.objects.order_by('-id')[:5]
     # print('Categorias: ', len(category_list), ':', category_list)
 
     page_list = Page.objects.order_by('-views')[:5]
