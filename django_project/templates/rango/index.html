@@ -1,26 +1,57 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-{% block title_block %}
-    Login
-{% endblock title_block%}
-
 {% block body_block %}
-    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
     <div class="jumbotron">
-        <h2 class="display-5">Entrar</h2>
+        <h2 class="display-5">Tux diz...</h2>
+        {% if user.is_superuser %}
+            Olá chefe!
+        {% elif user.is_authenticated %}
+            Olá {{ user.username }}
+        {% else %}
+            Olá parceiro!
+        {% endif %}
     </div>
-    <form class="form-signin" role="form" method="post" action=".">
-        {% csrf_token %}
-        <h3 class="form-signin-heading">Informe seus dados:</h3>
-        <label for="inputUsername" class="sr-only">Nome do usuário:</label>
-        <input type="text" name="username" id="id_username" class="form-control"
-               placeholder="Username" required autofocus>
-        <label for="inputPassword" class="sr-only">Senha:</label>
-        <input type="password" name="password" id="id_password" class="form-control"
-               placeholder="Password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit"
-                value="Submit" />Entrar</button>
-    </form>
-    <p>Não é um membro ainda? <a href="{% url 'register' %}">Registre-se</a>!</p>
-{% endblock %}
+
+    <div class="row marketing">
+        <div class="col-lg-6">
+            <h4>Categorias mais curtidas</h4>
+            <p>
+                {% if categories %}
+                    <ul class="list-group">
+                        {% for category in categories %}
+                            <li class="list-group-item justify-content-between">
+                                <a href="{% url 'show_category' category.slug %}"> {{ category.name }}</a>
+                                <span class="badge badge-default badge-pill">{{ category.likes }}</span>
+{#                                <span class="badge badge-default badge-pill">{{ category.views }}</span>#}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <strong>Não há categorias cadastradas.</strong>
+                {% endif %}
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <h4>Páginas mais acessadas</h4>
+            <p>
+                {% if pages %}
+                    <ul class="list-group">
+                        {% for page in pages %}
+                            <li class="list-group-item justify-content-between">
+                                <a href="{{ page.url }}"> {{ page.title}}</a>
+                                <span class="badge badge-default badge-pill">{{ page.views }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <strong>Não há páginas cadastradas.</strong>
+                {% endif %}
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <img src="{% static "images/tux.png" %}" alt="Picture of Rango" /><br/>
+    </div>
+{% endblock body_block %}
