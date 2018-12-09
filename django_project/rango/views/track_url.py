@@ -4,6 +4,8 @@ from django.shortcuts import redirect
 from ..models import Page
 
 
+##### Não vou utilizar track url
+
 def track_url(request, page_id):
     url = reverse('index')
     try:

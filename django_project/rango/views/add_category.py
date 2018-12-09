@@ -6,6 +6,7 @@ from django.views.generic.base import View
 from .login_required import LoginRequiredMixin
 from ..forms import CategoryForm
 
+######## Não está sendo utilizado
 
 class Add_Category(LoginRequiredMixin, View):
     form_class = CategoryForm

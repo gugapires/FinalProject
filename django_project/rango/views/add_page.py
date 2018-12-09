@@ -7,6 +7,11 @@ from .login_required import LoginRequiredMixin
 #from ..forms import PageForm
 from ..models import Category
 
+
+
+######### Não está terminado
+
+
 """
 class Add_Page (LoginRequiredMixin, View ):
     form_class = PageForm

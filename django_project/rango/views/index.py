@@ -3,6 +3,7 @@ from ..models import Category, Page
 
 
 def index(request):
+    ### Troquei por id, pois likes estava dando pau no sistema
     category_list = Category.objects.order_by('-id')[:5]
     # print('Categorias: ', len(category_list), ':', category_list)
 

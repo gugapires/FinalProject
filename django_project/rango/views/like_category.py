@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 from ..models import Category
 
-### Não preciso dessa merda eu retirei a parte de likes, posso ver se posso dar outro nome caso
-# precise para mostrar os livros
+#### Não está terminado
+### Posso reaproveitar para usar outra coisa no lugar de dar like
 
 """
 @login_required

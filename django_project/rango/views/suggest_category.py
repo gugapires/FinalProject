@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from ..models import Category
 
+##### Não está terminado
 
 def get_category_list(max_results=0, starts_with=''):
     cat_list = []

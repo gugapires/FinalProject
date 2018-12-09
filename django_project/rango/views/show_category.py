@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from ..models import Category, Page
 
+#### Não esta terminado
 
 def show_category(request, category_name_slug):
     context_dict = {}

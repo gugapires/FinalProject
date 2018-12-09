@@ -2,6 +2,10 @@ from django.shortcuts import render
 from ..forms import UserForm, UserProfileForm
 
 
+#### Consigo retirar o UserprofileForm lá na model e no forms,
+#### Fazendo assim um lugar próprio para colocar a imagem,
+#### invés de colocar junto ao registro, caso eu não queira imagem de perfil
+
 def register(request):
     registered = False
 
@@ -28,7 +32,6 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
 
-    context_dict = {'user_form': user_form,
-                   'profile_form': profile_form,
-                   'registered': registered}
+    context_dict = {'user_form': user_form, 'profile_form': profile_form, 'registered': registered}
+
     return render(request, 'rango/register.html', context_dict)
