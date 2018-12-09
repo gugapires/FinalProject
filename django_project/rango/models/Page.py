@@ -2,6 +2,8 @@ from django.db import models
 from .Category import Category
 
 
+#### Não está terminado
+
 class Page(models.Model):
     category = models.ForeignKey(Category)
     title = models.CharField(max_length=128)
