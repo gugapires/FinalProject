@@ -3,7 +3,8 @@ from django.core.urlresolvers import reverse
 from django.contrib.staticfiles import finders
 
 
-# Thanks to Enzo Roiz https://github.com/enzoroiz who made these tests during an internship with us
+# Testes pego do marco
+# ainda não rodei
 
 class GeneralTests(TestCase):
     def test_serving_static_files(self):
