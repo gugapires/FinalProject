@@ -2,10 +2,10 @@
 
 ### Andamento
 
-####Feito:
-Login funcionando.
-Bootstrap.
+#### Feito:
+##### Login funcionando.
+##### Bootstrap.
 
-####O que falta:
-Fazer Separação do forms para cadastradar imagens e jogar no index.
-Page e Category não estão terminadas.
+#### O que falta:
+##### Fazer Separação do forms para cadastradar imagens e jogar no index.
+##### Page e Category não estão terminadas.
