@@ -11,7 +11,7 @@ Registre-se
     <div class="col-lg-4 offset-4">
         {% if registered %}
         <strong>Obrigado por se registrar!</strong><br/>
-        <a href="{% url 'index' %}">Volte à página principal.</a><br/>
+        <a href="{% url 'login' %}">Ir à página de Login.</a><br/>
         {% else %}
         <form role="form" id="user_form" method="post" action="{% url 'register' %}" enctype="multipart/form-data">
             {% csrf_token %}
